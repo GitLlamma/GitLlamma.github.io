@@ -4,6 +4,7 @@
   box-sizing: border-box;
   color: white;
   font-size: 20pt;
+  font-family: 'Roboto', sans-serif;
 }
 
 html {
@@ -38,12 +39,24 @@ h3 {
   white-space: nowrap;
 }
 
+hr {
+  border: none;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(0,0,0,0), #EAA295, rgba(0,0,0,0));
+
+}
+
 .socialul {
   list-style-type: none;
 }
 
 .socialli {
   padding: 20px 0 0 0;
+}
+
+svg:hover {
+  transform: translateY(-5px);
+  transition: all 500ms ease;
 }
 
 .leftbar {
@@ -68,11 +81,14 @@ h3 {
   display: block;
 }
 
+.first {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .section {
   width: 100%;
-  display: flex;
-  margin: 30px 0 100px 0;
-  flex-wrap: wrap;
+  margin: 100px 0;
 }
 
 .piccontainer {
@@ -87,6 +103,13 @@ h3 {
   display: inline-block;
   vertical-align: text-top;
   width: 100%;
+}
+
+.rotated {
+  transform: translateX(-61px) translateY(-40px) rotate(90deg);
+  font-size: 18px;
+  white-space: nowrap;
+  opacity: 0;
 }
 
 .scrolled-down{
@@ -105,11 +128,17 @@ h3 {
   .content {
     width: 70%;
   }
-  .section {
+
+  .first {
     flex-wrap: nowrap;
   }
+
   svg {
     width: 48px;
     height: 48px;
+  }
+
+  .rotated {
+    opacity: 100;
   }
 }
