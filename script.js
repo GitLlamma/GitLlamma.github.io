@@ -26,3 +26,10 @@ document.addEventListener("DOMContentLoaded", function(){
 
 });
 // DOMContentLoaded  end
+
+$(function() {
+  var navMain = $("#navbarNav");
+  navMain.on("click", "a:not([data-toggle])", null, function () {
+    navMain.collapse('hide');
+  });
+});
