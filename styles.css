@@ -3,7 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   color: white;
-  font-size: 16pt;
+  font-size: 20pt;
 }
 
 html {
@@ -18,12 +18,14 @@ img {
   width: 100%;
   height: auto;
   border-radius: 25px;
+  max-height: 400px;
+  max-width: 400px;
 }
 
 svg {
   fill: white;
-  width: 48px;
-  height: 48px;
+  width: 0;
+  height: 0;
 }
 
 h1 {
@@ -62,7 +64,7 @@ h3 {
 
 .content {
   margin: auto;
-  width: 70%;
+  width: 90%;
   display: block;
 }
 
@@ -70,6 +72,7 @@ h3 {
   width: 100%;
   display: flex;
   margin: 30px 0 100px 0;
+  flex-wrap: wrap;
 }
 
 .piccontainer {
@@ -93,21 +96,20 @@ h3 {
   transform:translateY(0); transition: all 0.3s ease-in-out;
 }
 
-/* mobile stuff */
-@media screen and (max-width:500px) {
-  svg {
-    width: 0;
-    height: 0;
-  }
 
-  .content {
-    width: 90%;
-  }
+@media screen and (min-width: 501px) and (max-width: 768px) {
+
 }
 
-/*desktop stuff */
-@media screen and (min-width: 501px) and (max-width:990px) {
-  .section {flex-wrap: wrap}
-  .piccontainer {width: 100%}
-  .profile {width: 300px}
+@media screen and (min-width: 769px) {
+  .content {
+    width: 70%;
+  }
+  .section {
+    flex-wrap: nowrap;
+  }
+  svg {
+    width: 48px;
+    height: 48px;
+  }
 }
