@@ -93,12 +93,7 @@ h3 {
   transform:translateY(0); transition: all 0.3s ease-in-out;
 }
 
-@media screen and (max-width:990px) {
-  .section {flex-wrap: wrap}
-  .piccontainer {width: 100%}
-  .profile {width: 300px}
-}
-
+/* mobile stuff */
 @media screen and (max-width:500px) {
   svg {
     width: 0;
@@ -108,4 +103,11 @@ h3 {
   .content {
     width: 90%;
   }
+}
+
+/*desktop stuff */
+@media screen and (min-width: 501px) and (max-width:990px) {
+  .section {flex-wrap: wrap}
+  .piccontainer {width: 100%}
+  .profile {width: 300px}
 }
