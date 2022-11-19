@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   color: white;
+  font-size: 16pt;
 }
 
 html {
@@ -96,4 +97,15 @@ h3 {
   .section {flex-wrap: wrap}
   .piccontainer {width: 100%}
   .profile {width: 300px}
+}
+
+@media screen and (max-width:500px) {
+  svg {
+    width: 0;
+    height: 0;
+  }
+
+  .content {
+    width: 90%;
+  }
 }
