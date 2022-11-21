@@ -23,10 +23,34 @@ img {
   max-width: 400px;
 }
 
-svg {
-  fill: white;
-  width: 0;
-  height: 0;
+a {
+  color: #EAA295;
+}
+
+a:hover {
+  color: #EAA295;
+  text-decoration: none;
+}
+
+.skills-grid {
+  display: grid;
+  column-count: 1;
+  margin: auto;
+  column-gap: 50px;
+  row-gap: 1em;
+}
+
+.skill-description {
+  font-size: 14pt;
+}
+
+.svg-skill {
+  fill: #EAA295;
+  padding: 10px;
+  width: 144px;
+  height: 144px;
+  background-color: #000000;
+  border-radius: 72px;
 }
 
 h1 {
@@ -39,6 +63,10 @@ h3 {
   white-space: nowrap;
 }
 
+h6 {
+  padding-top: 25px;
+}
+
 hr {
   border: none;
   height: 1px;
@@ -48,21 +76,33 @@ hr {
 
 .socialul {
   list-style-type: none;
+  background-color: black;
+  padding: 10px 10px 20px 10px;
+  border-radius: 15px;
+  border-style: solid;
+  border-color: #EAA295;
+  opacity: 0;
 }
 
 .socialli {
-  padding: 20px 0 0 0;
+  padding: 10px 0 0 0;
 }
 
-svg:hover {
+.svg-social {
+  fill: white;
+  width: 0;
+  height: 0;
+}
+
+.svg-social:hover {
   transform: translateY(-5px);
+  fill: #EAA295;
   transition: all 500ms ease;
 }
 
 .leftbar {
   position: fixed;
-  padding-left: 15px;
-
+  padding-left: 40px;
   height: 100%;
 }
 
@@ -89,6 +129,7 @@ svg:hover {
 .section {
   width: 100%;
   margin: 100px 0;
+  text-align: center;
 }
 
 .piccontainer {
@@ -105,11 +146,31 @@ svg:hover {
   width: 100%;
 }
 
-.rotated {
-  transform: translateX(-61px) translateY(-40px) rotate(90deg);
-  font-size: 18px;
-  white-space: nowrap;
-  opacity: 0;
+.contact {
+  color: #EAA295;
+  padding: 10px;
+  border-radius: 15px;
+  border-style: solid;
+  border-color: #EAA295;
+  background-color: black;
+}
+
+.contact:hover {
+  color: black;
+  background-color: #EAA295;
+  text-decoration: none;
+  border-color: black;
+  padding: 15px;
+  transition: all 500ms;
+}
+
+.footer {
+  width: 100%;
+  height: 150px;
+  font-size: 12pt;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .scrolled-down{
@@ -120,8 +181,10 @@ svg:hover {
 }
 
 
-@media screen and (min-width: 501px) and (max-width: 768px) {
-
+@media only screen and (min-width: 501px) and (max-width: 768px) {
+  .skills-grid {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 @media only screen and (min-width: 769px) {
@@ -133,12 +196,16 @@ svg:hover {
     flex-wrap: nowrap;
   }
 
-  svg {
-    width: 48px;
-    height: 48px;
+  .svg-social {
+    width: 32px;
+    height: 32px;
   }
 
-  .rotated {
-    opacity: 100;
+  .skills-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .socialul {
+    opacity: 1;
   }
 }
