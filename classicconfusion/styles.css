@@ -1,18 +1,32 @@
 * {
     margin: 0 auto;
-    padding: 0 20px;
     max-width: 960px;
 }
 
 body {
     font-family: 'Roboto', sans-serif;
-    font-size: 16px;
-    color: #333;
+    font-size: 20px;
+    color: #ffffff;
     text-align: center;
+    background-color: #2D4E7D;
+    padding: 20px 0;
 }
 
 table, th, td {
     border-collapse: collapse;
     border-spacing: 0;
-    border: 1px solid #333;
+    border: 10px solid #2D4E7D;
+    background-color: none;
+}
+
+table {
+    margin: 20px auto;
+}
+
+h1 {
+    font-size: 60px;
+}
+
+.spacer {
+    height: 30px;
 }
