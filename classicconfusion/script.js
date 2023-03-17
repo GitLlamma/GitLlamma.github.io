@@ -43,13 +43,13 @@ function playSwitch() {
     isPlaying = !isPlaying;
 }
 
-function choose(song) {
+function choose(song, title) {
     source = song;
     if (document.getElementById("play_button").disabled==true) {
         document.getElementById("play_button").disabled = false;
     }
     document.getElementById("player").pause();
     document.getElementById("play_button").innerHTML = "Play";
-    document.getElementById("currSong").innerHTML = song;
+    document.getElementById("currSong").innerHTML = title;
     isPlaying = false;
 }
