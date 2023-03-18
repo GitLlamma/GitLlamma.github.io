@@ -30,3 +30,7 @@ h1 {
 .spacer {
     height: 30px;
 }
+
+#song_table {
+    width: 480px;
+}
