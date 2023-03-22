@@ -1,36 +1,121 @@
 * {
     margin: 0 auto;
-    max-width: 960px;
 }
+
+html {
+    position: relative;
+    min-height: 100%;
+  }
 
 body {
     font-family: 'Roboto', sans-serif;
-    font-size: 20px;
+    font-size: 25px;
     color: #ffffff;
     text-align: center;
     background-color: #040404;
-    padding: 20px 0;
+    height: 100%;
 }
 
-table, th, td {
-    border-collapse: collapse;
-    border-spacing: 0;
-    border: 10px solid #040404;
-    background-color: none;
-}
-
-table {
-    margin: 20px auto;
+.content {
+    min-height: 100%;
+    padding-bottom: 50px;
 }
 
 h1 {
-    font-size: 60px;
+    font-size: 100px;
 }
 
 .spacer {
-    height: 30px;
+    height: 10px;
 }
 
 #song_table {
     width: 480px;
+}
+
+header {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+footer {
+    height: 70px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: #222222;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 0 3px 3px #040404 inset;
+}
+
+#main_banner {
+    vertical-align: center;
+    height: 300px;
+    width: 100%;
+    line-height: 270px;
+}
+
+.song-list {
+    text-align: center;
+    max-width: 400px;
+    overflow: auto;
+    height: 200px;
+}
+
+.song-button {
+    background-color: #222222;
+    padding: 20px 0;
+    border: 1px solid #ffffff;
+}
+
+.song-button:hover {
+    background-color: #454444;
+}
+
+.mini {
+    width: 45px;
+    height: 45px;
+}
+
+.bar {
+    display: inline-block;
+    height: 50px;
+    vertical-align: middle;
+}
+
+#title {
+    width: 300px;
+    height: 40px;
+    font-size: 30px;
+}
+
+#banner {
+    width: 100%;
+    height: auto;
+    opacity: 0;
+    transition: all 1s ease-in;
+    -webkit-transition: all 1s ease-in;
+    -moz-transition: all 1s ease-in;
+    -ms-transition: all 1s ease-in;
+    -o-transition: all 1s ease-in;
+}
+
+#whatband {
+    opacity: 0;
+    transition: all 1s ease-in;
+    -webkit-transition: all 1s ease-in;
+    -moz-transition: all 1s ease-in;
+    -ms-transition: all 1s ease-in;
+    -o-transition: all 1s ease-in;
+    height: 300px;
+    text-shadow: 1px 1px 2px blueviolet, 0 0 25px #040404, 0 0 5px red;
+}
+
+.social {
+    max-width: 70px;
+    height: auto;
 }

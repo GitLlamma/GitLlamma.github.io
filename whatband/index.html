@@ -5,41 +5,39 @@
         <title>What Band</title>
         <link rel="stylesheet" href="styles.css" type="text/css" media>
     </head>
+    <audio id="player"></audio>
         <body>
-            <audio id="player"></audio>
-            <h1>What Band</h1>
-            <p>welcome to the site, stay a while</p>
-            <div class="spacer"></div>
-            <img src="images/ethan.jpg" style="width:480px; height:480px">
-            <!-- <p style="max-width: 500px"><strong>is anybody real?</strong> is my second album and latest release.
-                I had a ton of fun making this one, especially when trying out some new plugins 
-                like MT PowerDrumKit and Surge XT.  My favorite song from this album is a toss up 
-                between "Indomitable" and "Book of Life".</p> -->
-            <div class="spacer"></div>
-            <h2>WIP</h2>
-            <table id="song_table">
-                <tr>
-                    <th></th>
-                    <th>Song</th>
-                    <th>Last Updated</th>
-                </tr>
-                <tr>
-                    <td><button onclick="choose('JetalMazzv1.wav')">Choose</button></td>
-                    <td>Do Without You</td>
-                    <td>03/18/2023</td>
-                    <td><button onclick="toggleExpand('dowithoutyou')">Lyrics</button></td>
-                </tr>
-                <tr><td id="dowithoutyou" class="lyrics" colspan=4></td></tr>
-                <tr>
-                    <td><button onclick="choose('letloose.wav')">Choose</button></td>
-                    <td>Get My Name Right</td>
-                    <td>03/19/2023</td>
-                    <td><button onclick="toggleExpand('getmynameright')">Lyrics</button></td>
-                </tr>
-                <tr><td id="getmynameright" class="lyrics" colspan=4></td></tr>
-            </table>
-            <button id="play_button" onclick="playSwitch()" disabled>Please Choose a Song</button>
-            <p>Website last updated 19 March 2023</p>
-            <script type="text/javascript" src="script.js"></script>
+            <div class="content">
+                <div id="main_banner">
+                    <header id="whatband">
+                        <h1>Whatband</h1>
+                    </header>
+                    <img id="banner" src="images/banner.png">
+                </div>
+                <div class="spacer"></div>
+                <h2 style="padding-bottom: 20px;">Discography</h2>
+                <div class="song-list">
+                    <div class="song-button" data-id="0" onclick="playSong(this)">Get My Name Right</div>
+                    <div class="song-button" data-id="1" onclick="playSong(this)">Do Without You</div>
+                </div>
+                <div class="spacer"></div>
+                <h2 style="margin-bottom: 20px;">Check us out</h2>
+                <div class="links">
+                    <a href="https://www.instagram.com/whatbandmusic/"><img src="images/instagram.png" class="social"></a>
+                </div>
+            </div>
+
+            <footer>
+                <div class="playcontainer">
+                    <div id="title" class="bar">
+                        Get My Name Right
+                    </div>
+                    <div class="bar">
+                        <img src="images/play.png"  class="mini" id="play" onclick="playSwitch()">
+                        <img src="images/next.png" class="mini" id="next" onclick="nextSong()">
+                    </div>
+                </div>
+            </footer>
         </body>
+        <script type="text/javascript" src="script.js"></script>
 </html>
