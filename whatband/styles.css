@@ -18,7 +18,7 @@ body {
 
 .content {
     min-height: 100%;
-    padding-bottom: 50px;
+    padding-bottom: 70px;
 }
 
 h1 {
@@ -119,3 +119,7 @@ footer {
     max-width: 70px;
     height: auto;
 }
+
+/* @media only screen and (max-width: 768px) {
+    
+} */
