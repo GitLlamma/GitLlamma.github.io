@@ -1,7 +1,7 @@
 var isPlaying = false;
 var source = 0;
-var songs = ["letloose.wav", "JetalMazzv1.wav"];
-var names = ["Get My Name Right", "Do Without You"];
+var songs = ["letloose.wav", "JetalMazzv1.wav", "Geniuses.wav"];
+var names = ["Get My Name Right", "Do Without You", "Geniuses"];
 document.getElementById("player").src='unfinished_songs/' + songs[source];
 document.getElementById("banner").style.opacity = 1;
 const delay = ms => new Promise(res => setTimeout(res, ms));
