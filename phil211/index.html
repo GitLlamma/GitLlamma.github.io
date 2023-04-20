@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta id="viewport" name="viewport" content ="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" href="styles.css">
+    <title>Viruses</title>
+</head>
+<body>
+    <header>
+        <a href="#worms">WORMS</a>
+        <a href="#ransomware">RANSOMWARE</a>
+        <a href="#spyware">SPYWARE</a>
+        <a href="#bibliography">BIBLIOGRAPHY</a>
+    </header>
+
+    <h1>Computer Viruses</h1>
+
+    <div class="intro">
+        <p>Computer viruses come in many shapes and sizes, with danger levels ranging from harmless to devastating.  
+            The purpose of this website is to provide a general overview of certain types of computer viruses.
+        </p>
+        <img src="images/coolimage.jpg" alt="Virus Image" class="change-opacity">
+    </div>
+
+    <div class="section">
+        <h2 id="worms">Worms</h2>
+        <p class="overview"><em>Worms are viruses that are able to self-replicate.  While not inherently malicious, they 
+            are built to be incredibly pervasive and undetectable.  The term "virus" is probably used due to the nature of 
+            how these computer worms distribute themselves.</em>
+        </p>
+        <h4>Creeper</h4>
+        <p class="description">Creeper is known as the first computer virus.  During the developer of the internet (or rather, 
+            ARPANET), Bob Thomas created Creeper, a program that would send itself across the network, duplicate itself, 
+            display a message, and repeat the process.  The message it displayed said, "I'm the creeper, catch me if you can!" 
+            While not malicious, Creeper demonstrated the potential damage that could be done with a more sophisticated and 
+            wicked program.
+        </p>
+        <h4>Elk Cloner</h4>
+        <p class="description">Created by high school student Richard Skrenta, Elk Cloner would replicate itself across Apple II 
+            computers.  He originally created to prank his friends, but it also showed how invasive a virus can be.  
+            It was incredibly elusive, displaying the following message only every 50th time the computer would 
+            boot up:
+        </p>
+        <div class="centerimage">
+            <img src="images/Elk_Cloner_poem.png" alt="Elk Cloner Poem" class="change-opacity">
+        </div>
+    </div>
+    <div class="section">
+        <h2 id="ransomware">Ransomware</h2>
+        <p class="overview"><em>Ransomware is most often used to describe viruses that encrypt the target's files, rendering them 
+            unusable.  In order for the target to decrypt their files, they must pay the attacker a ransom.
+        </em>
+        </p>
+        <h4>WannaCry?</h4>
+        <p class="description">WannaCry is actually an example of both a worm and ransomware.  Because of a vulnerability in the 
+            SMB protocol for Windows computers (EternalBlue), WannaCry was able to send itself between computers.  It would 
+            encrypt files on the target host, display a message requesting around $300 in bitcoin in return for decrypting the files, 
+            then send itself somewhere else.  The Windows vulnerability has since been patched, but any older versions of Windows 
+            are still vulnerable.
+        </p>
+        <div class="centerimage">
+            <img src="images/wannacry.png" alt="WannaCry Message" class="change-opacity">
+        </div>
+        <h4>Robbinhood</h4>
+        <p class="description">Robbinhood is an interesting example of ransomware.  When the program reaches the target, it looks for specific configurations 
+            on the computer to make sure the attack is possible.  If not, it deletes itself.  Upon verifying that the attack can in fact be done, it disables 
+            all antivirus software it can.  It then forces all files to close so it can encrypt them.  After encrypting, a message pops up saying 
+            <em>Done, Enjoy buddy :)))</em>  Similarly to WannaCry, a file is left on the computer that requests a Bitcoin ransom in return for decrypting the 
+            files.
+        </p>
+        <div class="centerimage">
+            <img src="images/robbinhoodstuff.png" alt="Robbinhood Message" class="change-opacity">
+        </div>
+    </div>
+    <div class="section">
+        <h2 id="spyware">Spyware</h2>
+        <p class="overview"><em>Spyware can refer to a wide variety of viruses, but the thing they all have in common is that 
+            they collect information about the target.  Examples of spyware include keyloggers, trojans, and web trackers.
+        </em>
+        </p>
+        <h4>DarkHotel</h4>
+        <p class="description">DarkHotel was an interesting form of spyware.  It would piggyback off of hotel wifi networks, attempting to infect anyone 
+            using the public network.  When someone would log in, it would prompt them to update their Adobe software.  If the target accepted, a keylogging 
+            program would be installed on the device.  The keylogger would listen for credentials such as usernames and passwords and then send them back to 
+            the attacker.
+        </p>
+        <h4>BonziBuddy</h4>
+        <p class="description">One of the earliest examples of spyware was called BonziBuddy.  Around the early 2000s, personal software 
+            assistants were growing popular.  BonziBuddy was one of the more popular software assistants because of how 
+            friendly and fun it seemed.  However, what those who downloaded BonziBuddy didn't know was that it was actually spyware, 
+            extracting personal information through a keylogger to develop more targeted ads.  Before long, thousands of computers were 
+            infected with this monkey spyware.  It's interesting to me that collecting personal information has become commonplace in 
+            the modern day...
+        </p>
+        <div class="centerimage">
+            <img src="images/Bonzi_Buddy.png" alt="BonziBuddy" class="change-opacity">
+        </div>
+    </div>
+
+    <div id="bibliography">
+        <h2>Bibliography</h2>
+        <p class="citation">Awati, R. (2021). Elk Cloner. Security. https://www.techtarget.com/searchsecurity/definition/Elk-Cloner</p>
+        <p class="citation">Conocimiento, V. A. (2019, August 28). The History of Computer Viruses - OpenMind. OpenMind. https://www.bbvaopenmind.com/en/technology/digital-world/the-history-of-computer-viruses/</p>
+        <p class="citation">D’Souza, D. (2021, October 29). The cartoon gorilla that taught a generation to not click “download.” Mashable. https://mashable.com/article/bonzi-buddy-explained</p>
+        <p class="citation">Fruhlinger, J. (2022, August 24). WannaCry explained: A perfect ransomware storm. CSO Online. https://www.csoonline.com/article/3227906/wannacry-explained-a-perfect-ransomware-storm.html</p>
+        <p class="citation">Matthews, T. (2022). Creeper: The World’s First Computer Virus. Exabeam. https://www.exabeam.com/information-security/creeper-computer-virus/</p>
+        <p class="citation">OpenAI. (2023). ChatGPT (Mar 23 version) [Large language model]. https://chat.openai.com/chat  (used to design the website, not to write 
+            the content)
+        </p>
+        <p class="citation">Skrenta, Richard - Own work (Own screenshot), Public Domain, https://commons.wikimedia.org/w/index.php?curid=107324652</p>
+        <p class="citation">The now-defunct bonzi.com website., Fair use, https://en.wikipedia.org/w/index.php?curid=48781610</p>
+        <p class="citation">The Science Elf. (2019, September 1). A Brief History of Computer Viruses [Video]. YouTube. https://www.youtube.com/watch?v=3nrwAW_0FjU</p>
+        <p class="citation">WannaCry. https://cdn.securelist.com/files/2017/05/wannacry_05.pngDownloaded from :https://securelist.com/blog/incidents/78351/wannacry-ransomware-used-in-widespread-attacks-all-over-the-world/, Fair use, https://en.wikipedia.org/w/index.php?curid=54032765</p>
+        <p class="citation">Wayback Machine. (n.d.). https://web.archive.org/web/20131101154446/https://www.justice.gov.tr/e-journal/pdf/cybercrime_essay.pdf</p>
+        <p class="citation">Webmaster. (2022, June 1). What is Malware Attack? Different Sources of Malware Attack | Cyberior. Hong Kong : Digital Identity Theft Protection. https://cyberior.com/hk/blog/2019/05/08/what-is-malware-attack-different-sources-of-malware-attack/</p>
+        <p class="citation">Wikipedia contributors. (2001). Computer virus. Wikipedia. https://en.wikipedia.org/wiki/Computer_virus</p>
+        <p class="citation">Wikipedia contributors. (2023a). Computer worm. Wikipedia. https://en.wikipedia.org/wiki/Computer_worm</p>
+        <p class="citation">Wikipedia contributors. (2023b). Spyware. Wikipedia. https://en.wikipedia.org/wiki/Spyware</p>
+        <p class="citation">Zetter, K. (2014, November 10). DarkHotel: A Sophisticated New Hacking Attack Targets High-Profile Hotel Guests. WIRED. https://www.wired.com/2014/11/darkhotel-malware/</p>
+
+    </div>
+
+    <div class="conclusion">Thanks for reading!<br><br>Created by Joshua Esplin<br>Last updated 19 April, 2023</div>
+
+    <div class="blurrer"></div>
+    <script text="type/javascript" src="script.js"></script>
+</body>
+</html>
