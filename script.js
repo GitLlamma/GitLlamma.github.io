@@ -1,73 +1,82 @@
-var isSecret = false;
+let isSecret = false;
 
-document.addEventListener("DOMContentLoaded", function(){
-
-  el_autohide = document.querySelector('.autohide');
-
-  // add padding-top to bady (if necessary)
-  navbar_height = document.querySelector('.navbar').offsetHeight;
-  document.body.style.paddingTop = navbar_height + 'px';
-
-  if(el_autohide){
-    var last_scroll_top = 0;
-    window.addEventListener('scroll', function() {
-          let scroll_top = window.scrollY;
-         if(scroll_top < last_scroll_top) {
-              el_autohide.classList.remove('scrolled-down');
-              el_autohide.classList.add('scrolled-up');
-          }
-          else {
-              el_autohide.classList.remove('scrolled-up');
-              el_autohide.classList.add('scrolled-down');
-          }
-          last_scroll_top = scroll_top;
+document.addEventListener("DOMContentLoaded", function() {
+  // Navbar toggle for mobile
+  const navbarToggle = document.getElementById('navbarToggle');
+  const navbarMenu = document.getElementById('navbarMenu');
+  
+  if (navbarToggle && navbarMenu) {
+    navbarToggle.addEventListener('click', function() {
+      navbarMenu.classList.toggle('active');
+      const isExpanded = navbarMenu.classList.contains('active');
+      navbarToggle.setAttribute('aria-expanded', isExpanded);
     });
-    // window.addEventListener
+
+    // Close menu when clicking a nav link
+    const navLinks = navbarMenu.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
+      link.addEventListener('click', function() {
+        navbarMenu.classList.remove('active');
+        navbarToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', function(event) {
+      const isClickInside = navbarToggle.contains(event.target) || navbarMenu.contains(event.target);
+      if (!isClickInside && navbarMenu.classList.contains('active')) {
+        navbarMenu.classList.remove('active');
+        navbarToggle.setAttribute('aria-expanded', 'false');
+      }
+    });
   }
-  // if
 
-});
-// DOMContentLoaded  end
-
-$(function() {
-  var navMain = $("#navbarNav");
-  navMain.on("click", "a:not([data-toggle])", null, function () {
-    navMain.collapse('hide');
-  });
+  // Secret button functionality
+  const secretButton = document.getElementById('secret');
+  if (secretButton) {
+    secretButton.addEventListener('click', secretClick);
+  }
 });
 
 function secretClick() {
   isSecret = true;
-  document.getElementById("profile").src = "images/beardman.png";
-  document.querySelector("body").style.backgroundColor = "black";
-  document.getElementById("myNavbar").style.backgroundColor = "black";
+  const profileImg = document.getElementById("profile");
+  if (profileImg) {
+    profileImg.src = "images/beardman.png";
+  }
+  document.body.style.backgroundColor = "black";
 }
 
+// Name animation effect
 const letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
-document.getElementById("myName").onmouseover = event => {
-  if (!isSecret) {
-    return;
-  }
+const nameElement = document.getElementById("myName");
+if (nameElement) {
+  nameElement.addEventListener('mouseover', (event) => {
+    if (!isSecret) {
+      return;
+    }
+    
     let i = 0;
-
     const interval = setInterval(() => {
-        event.target.innerText = event.target.innerText.split("")
+      event.target.innerText = event.target.innerText
+        .split("")
         .map((letter, index) => {
-            if(index === 4) {
-                return " ";
-            }
-            if(index < i) {
-                return event.target.dataset.value[index];
-            }
-            return letters[Math.floor(Math.random() * 52)];
+          if (index === 4) {
+            return " ";
+          }
+          if (index < i) {
+            return event.target.dataset.value[index];
+          }
+          return letters[Math.floor(Math.random() * 52)];
         })
         .join("");
 
-    if (i >= event.target.dataset.value.length){
+      if (i >= event.target.dataset.value.length) {
         clearInterval(interval);
-    }
+      }
 
-    i += 1 / 3;
+      i += 1 / 3;
     }, 40);
+  });
 }
