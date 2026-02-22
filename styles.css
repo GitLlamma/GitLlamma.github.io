@@ -5,19 +5,24 @@
 }
 
 :root {
-  --primary-color: #EAA295;
-  --primary-hover: #fac9c1;
-  --bg-dark: #002431;
-  --bg-darker: #001820;
-  --text-primary: #ffffff;
-  --text-secondary: #b8c5d0;
-  --card-bg: #003644;
+  --primary-color: #FF6B6B;
+  --primary-hover: #FF8E8E;
+  --accent-color: #4ECDC4;
+  --bg-dark: #0A192F;
+  --bg-darker: #020C1B;
+  --bg-card: #112240;
+  --text-primary: #E6F1FF;
+  --text-secondary: #8892B0;
+  --text-muted: #495670;
+  --border-color: rgba(78, 205, 196, 0.1);
+  --shadow-color: rgba(0, 0, 0, 0.4);
   --transition: all 0.3s ease;
 }
 
 html {
   scroll-behavior: smooth;
   font-size: 16px;
+  scroll-padding-top: 100px;
 }
 
 body {
@@ -86,12 +91,13 @@ img {
   top: 0;
   left: 0;
   right: 0;
-  background-color: rgba(0, 36, 49, 0.95);
+  background-color: rgba(10, 25, 47, 0.95);
   backdrop-filter: blur(10px);
   z-index: 1000;
   padding: 1rem 0;
-  border-bottom: 1px solid rgba(234, 162, 149, 0.1);
+  border-bottom: 1px solid var(--border-color);
   transition: var(--transition);
+  box-shadow: 0 10px 30px -10px var(--shadow-color);
 }
 
 .navbar-container {
@@ -151,7 +157,7 @@ img {
 }
 
 .nav-link:hover {
-  background-color: rgba(234, 162, 149, 0.1);
+  background-color: rgba(78, 205, 196, 0.1);
   transform: translateY(-2px);
 }
 
@@ -250,13 +256,13 @@ img {
 
 .profile-pic {
   border: 3px solid var(--primary-color);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 10px 30px var(--shadow-color);
   transition: var(--transition);
 }
 
 .profile-pic:hover {
   transform: translateY(-5px);
-  box-shadow: 0 15px 40px rgba(234, 162, 149, 0.3);
+  box-shadow: 0 15px 40px rgba(255, 107, 107, 0.4);
 }
 
 .secret-button {
@@ -286,17 +292,17 @@ img {
 }
 
 .experience-item {
-  background-color: var(--card-bg);
+  background-color: var(--bg-card);
   padding: 2rem;
   border-radius: 1rem;
   text-align: left;
   transition: var(--transition);
-  border: 1px solid rgba(234, 162, 149, 0.1);
+  border: 1px solid var(--border-color);
 }
 
 .experience-item:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 10px 30px var(--shadow-color);
   border-color: var(--primary-color);
 }
 
@@ -340,17 +346,17 @@ img {
 }
 
 .skill {
-  background-color: var(--card-bg);
+  background-color: var(--bg-card);
   padding: 2rem;
   border-radius: 1rem;
   text-align: center;
   transition: var(--transition);
-  border: 1px solid rgba(234, 162, 149, 0.1);
+  border: 1px solid var(--border-color);
 }
 
 .skill:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 10px 30px var(--shadow-color);
   border-color: var(--primary-color);
 }
 
@@ -358,6 +364,11 @@ img {
   font-size: 0.95rem;
   color: var(--text-secondary);
   line-height: 1.7;
+}
+
+.skill-description strong {
+  color: var(--primary-color);
+  font-weight: 600;
 }
 
 .svg-skill {
@@ -400,7 +411,7 @@ img {
   color: var(--bg-dark);
   background-color: var(--primary-color);
   transform: translateY(-3px);
-  box-shadow: 0 10px 25px rgba(234, 162, 149, 0.3);
+  box-shadow: 0 10px 25px rgba(255, 107, 107, 0.4);
 }
 
 /* Footer */
@@ -409,7 +420,7 @@ img {
   padding: 3rem 2rem;
   text-align: center;
   background-color: var(--bg-darker);
-  border-top: 1px solid rgba(234, 162, 149, 0.1);
+  border-top: 1px solid var(--border-color);
   margin-top: 4rem;
 }
 
@@ -424,8 +435,9 @@ img {
   z-index: 1000;
   width: 10px;
   height: 10px;
-  left: 148px;
-  top: 158px;
+  left: 54%;
+  top: 42%;
+  transform: translate(-50%, -50%);
   border-radius: 50%;
   cursor: pointer;
 }
@@ -450,13 +462,13 @@ img {
     left: 0;
     right: 0;
     flex-direction: column;
-    background-color: rgba(0, 36, 49, 0.98);
+    background-color: rgba(10, 25, 47, 0.98);
     backdrop-filter: blur(10px);
     padding: 2rem;
     gap: 1rem;
     transform: translateX(-100%);
     transition: var(--transition);
-    border-bottom: 1px solid rgba(234, 162, 149, 0.1);
+    border-bottom: 1px solid var(--border-color);
   }
 
   .navbar-menu.active {
@@ -502,7 +514,7 @@ img {
 
 @media only screen and (min-width: 769px) {
   .skills-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .hero-content {
