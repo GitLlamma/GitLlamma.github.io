@@ -351,6 +351,10 @@ img {
   align-items: center;
 }
 
+#projects {
+  display: none;
+}
+
 .project-item {
   background-color: var(--bg-card);
   padding: 2.5rem 2rem;
