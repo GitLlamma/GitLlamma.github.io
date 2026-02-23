@@ -147,6 +147,10 @@ img {
   align-items: center;
 }
 
+.navbar-menu li:nth-child(4) {
+  display: none;
+}
+
 .nav-link {
   font-size: 0.9rem;
   font-weight: 500;
@@ -603,7 +607,7 @@ img {
 
 @media only screen and (min-width: 769px) {
   .skills-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .hero-content {
