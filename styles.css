@@ -150,7 +150,7 @@ img {
 .nav-link {
   font-size: 0.9rem;
   font-weight: 500;
-  letter-spacing: 0.5px;
+  letter-spacing: 1px;
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
   transition: var(--transition);
@@ -203,8 +203,7 @@ img {
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 2rem;
-  padding-top: 80px;
+  padding: 80px 2rem 0;
 }
 
 /* Hero Section */
@@ -286,18 +285,22 @@ img {
 .experience-list {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-  max-width: 800px;
+  gap: 3rem;
+  max-width: 900px;
   margin: 0 auto;
+  align-items: center;
 }
 
 .experience-item {
   background-color: var(--bg-card);
-  padding: 2rem;
+  padding: 2.5rem 2rem;
   border-radius: 1rem;
   text-align: left;
   transition: var(--transition);
   border: 1px solid var(--border-color);
+  max-width: 650px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .experience-item:hover {
@@ -308,50 +311,133 @@ img {
 
 .experience-item h3 {
   color: var(--primary-color);
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  text-align: left;
 }
 
 .job-title {
   font-size: 1.125rem;
   font-weight: 600;
   color: var(--text-primary);
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
 }
 
 .job-date {
   font-size: 0.9rem;
   color: var(--text-secondary);
   font-style: italic;
-  margin-bottom: 1rem;
+  margin-bottom: 1.25rem;
 }
 
 .job-description {
   list-style-position: inside;
   padding-left: 0;
+  margin-bottom: 0;
 }
 
 .job-description li {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
   color: var(--text-secondary);
   padding-left: 1rem;
+}
+
+/* Projects Section */
+.project-list {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  max-width: 900px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.project-item {
+  background-color: var(--bg-card);
+  padding: 2.5rem 2rem;
+  border-radius: 1rem;
+  text-align: left;
+  transition: var(--transition);
+  border: 1px solid var(--border-color);
+  max-width: 650px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.project-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px var(--shadow-color);
+  border-color: var(--primary-color);
+}
+
+.project-item h3 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.project-date {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+.project-description {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--primary-color);
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 0.75rem 1.5rem;
+  border: 2px solid var(--primary-color);
+  border-radius: 0.5rem;
+  transition: var(--transition);
+  text-decoration: none;
+}
+
+.project-link:hover {
+  background-color: var(--primary-color);
+  color: var(--bg-dark);
+  transform: translateX(5px);
+}
+
+.project-link::after {
+  content: '→';
+  font-size: 1.2rem;
+  transition: var(--transition);
+}
+
+.project-link:hover::after {
+  transform: translateX(3px);
 }
 
 /* Skills Grid */
 .skills-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 2rem;
-  margin: 3rem auto;
+  gap: 3rem;
+  margin: 4rem auto;
   max-width: 1000px;
+  justify-items: center;
 }
 
 .skill {
   background-color: var(--bg-card);
-  padding: 2rem;
+  padding: 2.5rem 2rem;
   border-radius: 1rem;
   text-align: center;
   transition: var(--transition);
   border: 1px solid var(--border-color);
+  max-width: 450px;
+  margin: 0 auto;
 }
 
 .skill:hover {
@@ -480,8 +566,7 @@ img {
   }
 
   .container {
-    padding: 0 1rem;
-    padding-top: 80px;
+    padding: 80px 1rem 0;
   }
 
   .hero-content {
