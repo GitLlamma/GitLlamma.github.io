@@ -268,9 +268,6 @@ img {
   box-shadow: 0 15px 40px rgba(255, 107, 107, 0.4);
 }
 
-.secret-button {
-  cursor: pointer;
-}
 
 /* Section Styles */
 .section {
@@ -524,17 +521,6 @@ img {
   margin: 0;
 }
 
-#secret {
-  position: absolute;
-  z-index: 1000;
-  width: 10px;
-  height: 10px;
-  left: 54%;
-  top: 42%;
-  transform: translate(-50%, -50%);
-  border-radius: 50%;
-  cursor: pointer;
-}
 
 /* Responsive Design */
 @media only screen and (max-width: 768px) {
